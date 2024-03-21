@@ -1,0 +1,73 @@
+
+.card{
+    position: relative;
+    background-color:rgb(255, 255, 255);
+    margin: 1rem;
+    max-width: 30rem;
+    max-height: 50rem;
+    transition: 0.2s;
+}
+
+.card:hover{
+    transform: translateY(-0.5rem);
+    box-shadow: 0.5rem 0.75rem 1.5rem #bbbbbb;
+}
+
+.image{
+    width:  100%;
+    height: 20vw;
+    object-fit: cover;
+}
+
+.productCard_cart{
+    position: absolute;
+    right: 0;
+    margin: 1rem;
+    font-size: 2rem;
+    transition: 0.2s;
+    cursor: pointer;
+    color: #FFFF;
+}
+
+.productCard_wishlist{
+    position: absolute;
+    right: 3rem;
+    margin: 1rem;
+    font-size: 2rem;
+    transition: 0.2s;
+    cursor: pointer;
+    color: #FFFF;
+}
+
+.ProductCard_fastSelling{
+    position: absolute;
+    font-size: 2rem;
+    left: 0;
+    margin: 1rem;
+    color: #FFFF;
+}
+
+.productCard_content{
+    margin: 2rem;
+}
+
+.productName{
+    font-size: 1.5rem;
+}
+
+.displayStack_1,
+.displayStack_2{
+    margin: 2rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.productPrice{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.productSales, .productTime{
+    font-size: 1.1rem;
+}

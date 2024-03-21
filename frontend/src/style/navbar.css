@@ -7,7 +7,7 @@
   }
   
   .nav-content {
-    max-width: 1600px;
+    max-width: 1300px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -44,7 +44,7 @@
     content: "";
     width: 2rem;
     height: 0.2rem;
-    background: linear-gradient(90deg, #ffffff 0%, rgb(130, 120, 197) 100%);
+    background: linear-gradient(90deg, #586549 -0.13%, white 99.87%);
     border-radius: 0.5rem;
     position: absolute;
     bottom: -0.6rem;
@@ -58,31 +58,28 @@
     transform: translateX(0);
     opacity: 1;
   }
-  
+
   .contact-btn {
     font-size: 0.9rem;
     font-weight: 500;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: floralwhite;
-    background: linear-gradient(
-      90deg,
-      rgb(112, 103, 173) 0%,
-      rgb(71, 63, 122) 100%
-    );
+    color: white;
+    background-color: #586549;
     padding: 0.6rem 2rem;
     border: none;
-    outline: 1.5px solid transparent;
+    outline: 2px solid transparent;
     border-radius: 0.2rem;
     cursor: pointer;
     transition: all 0.3s ease;
+    font-weight: bold;
   }
   
   .contact-btn:hover {
-    color: #a993fe;
-    background: #000;
-    outline: 1.5px solid #a993fe;
+    color: #586549;
+    background: white;
+    outline: 2px solid #586549;
   }
   .menu-btn {
     width: 3rem;
@@ -94,7 +91,7 @@
     border: none;
     border-radius: 0.4rem;
     color: #292929;
-    background: linear-gradient(90deg, #6e54ec -0.13%, #a29fdc 99.87%);
+    background: linear-gradient(90deg, #586549 -0.13%, white 99.87%);
     line-height: 0;
     cursor: pointer;
     transition: all 0.4s ease;
