@@ -12,48 +12,38 @@ function Products() {
       price: 220,
       rating: 5,
       timeLeft: 27,
-      totalSales: 4749
+      totalSales: 102
     },
     {
         id: 2,
         name: "FLOWER LEAVES - POSTER 2",
-        image: "images/posterpicture1.jpg",
+        image: "images/posterpicture2.jpg",
         productType: "Poster 2",
         price: 250,
         rating: 3,
         timeLeft: 27,
-        totalSales: 4749
+        totalSales: 42
     },
     {
         id: 3,
         name: "FLOWER LEAVES - POSTER 3",
-        image: "images/posterpicture1.jpg",
+        image: "images/posterpicture3.jpg",
         productType: "Poster 3",
         price: 220,
         rating: 2,
         timeLeft: 27,
-        totalSales: 4749
+        totalSales: 24
     },
     {
       id: 3,
       name: "FLOWER LEAVES - POSTER 4",
-      image: "images/posterpicture1.jpg",
-      productType: "Poster 3",
+      image: "images/posterpicture4.jpg",
+      productType: "Poster 4",
       price: 220,
       rating: 2,
       timeLeft: 27,
-      totalSales: 4749
+      totalSales: 47
   },
-  {
-    id: 3,
-    name: "FLOWER LEAVES - POSTER 5",
-    image: "images/posterpicture1.jpg",
-    productType: "Poster 3",
-    price: 220,
-    rating: 2,
-    timeLeft: 27,
-    totalSales: 4749
-},
   ];
 
   return (

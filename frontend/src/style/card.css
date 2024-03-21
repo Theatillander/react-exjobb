@@ -3,7 +3,7 @@
     position: relative;
     background-color:rgb(255, 255, 255);
     margin: 1rem;
-    max-width: 30rem;
+    max-width: 20rem;
     max-height: 50rem;
     transition: 0.2s;
 }
@@ -15,7 +15,7 @@
 
 .image{
     width:  100%;
-    height: 20vw;
+    height: 24vw;
     object-fit: cover;
 }
 
@@ -27,6 +27,7 @@
     transition: 0.2s;
     cursor: pointer;
     color: #FFFF;
+    transform: scale(1.2);
 }
 
 .productCard_wishlist{
@@ -37,37 +38,43 @@
     transition: 0.2s;
     cursor: pointer;
     color: #FFFF;
+    transform: scale(1.2);
 }
 
 .ProductCard_fastSelling{
     position: absolute;
-    font-size: 2rem;
+    font-size: 5rem;
     left: 0;
     margin: 1rem;
     color: #FFFF;
+    transform: scale(1.2);
 }
 
 .productCard_content{
-    margin: 2rem;
+    margin: 1rem;
 }
 
 .productName{
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 }
 
 .displayStack_1,
 .displayStack_2{
-    margin: 2rem 0;
+    margin: 1rem 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .productPrice{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: bold;
 }
 
 .productSales, .productTime{
-    font-size: 1.1rem;
+    font-size: 1rem;
+}
+
+.productSales{
+    font-style: italic;
 }

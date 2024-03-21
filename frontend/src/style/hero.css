@@ -31,6 +31,7 @@
     font-weight: 600;
     line-height: 5rem;
     margin-bottom: 1rem;
+    margin-top: 10rem;
     text-align: center;
   }
   
@@ -66,7 +67,7 @@
     font-size: 0.9rem;
     font-weight: 500;
     color: white;
-    background-color: #586549;
+    background-color: #987554;
     padding: 0.6rem 2rem;
     border: 2px solid white;
     outline: 2px solid transparent;
@@ -79,10 +80,10 @@
   .button2 {
     font-size: 0.9rem;
     font-weight: 500;
-    color: #586549;
+    color: #987554;
     background-color: white;
     padding: 0.6rem 2rem;
-    border: 2px solid #586549;
+    border: 2px solid #987554;
     outline: 2px solid transparent;
     border-radius: 0.2rem;
     cursor: pointer;
@@ -95,17 +96,23 @@
   }
   
   .button1:hover {
-    color: #586549;
+    color: #987554;
     background: white;
-    outline: 2px solid #586549;
+    outline: 2px solid #987554;
     transform: translateY(-0.2rem);
     transition: all 0.3s ease;
   }
 
 .button2:hover{
-  color: #586549;
+  color: #987554;
   background: white;
-  outline: 1px solid #586549;
+  outline: 1px solid #987554;
   transform: translateY(-0.2rem);
   transition: all 0.3s ease;
+}
+
+.hero-content h1{
+margin-top: 5rem;
+padding: 4rem;
+text-align: center;
 }

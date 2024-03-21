@@ -21,7 +21,7 @@ function Card(props) {
         <h3 className='productName'>{props.name}</h3>
         <div className='displayStack_1'>
           <div className='productPrice'>${props.price}</div>
-          <div className='productSales'>{props.totalSales} units sold</div>
+          <div className='productSales'>{props.totalSales} posters sold</div>
         </div>
         <div className='displayStack_2'></div>
         <div className='productRating'>
