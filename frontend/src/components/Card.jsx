@@ -1,18 +1,27 @@
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import FavoriteIcon from '@mui/icons-material/Favorite';
 import StarIcon from '@mui/icons-material/Star';
 import BookmarkIcon from '@mui/icons-material/Bookmark';
+import React, { useState } from 'react';
 import "../style/card.css";
 
 function Card(props) {
+
+  const [hovered, setHovered] = useState(false);
+
   return (
 
     <div key={props.id} className='card'> 
       <div className='top'>
         <ShoppingCartIcon className="productCard_cart"/>
         <BookmarkIcon className="productCard_wishlist"/>
-        <FavoriteBorderIcon className="ProductCard_fastSelling"/>
+        <div className='hovereffect'>
+      <div className="ProductCard_fastSelling" onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>
+        {hovered ? <FavoriteIcon /> : <FavoriteBorderIcon />}
+      </div>
+    </div>
       </div>
 
       <img src={props.image} alt='products-img' className='image'></img>
