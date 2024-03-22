@@ -75,7 +75,7 @@ function Card(props) {
         <h3 className='productName'>{props.name}</h3>
         <div className='displayStack_1'>
           <div className='productPrice'>${props.price}</div>
-          <div className='productSales'>{props.totalSales} posters sold</div>
+     
         </div>
         <div className='displayStack_2'></div>
         <div className='productRating'>
@@ -83,11 +83,9 @@ function Card(props) {
             <StarIcon id={index +1} key={index} />
           ))}
         </div>
-        <div className='productTime'>
-          {props.timeLeft} days left
+       <div className='productSales'>{props.totalSales} posters sold</div>
         </div>
       </div>
-    </div>
   );
 }
 

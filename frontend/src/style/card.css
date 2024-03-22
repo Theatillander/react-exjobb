@@ -15,7 +15,7 @@
 
 .image{
     width:  100%;
-    height: 24vw;
+    height: 20vw;
     object-fit: cover;
 }
 
@@ -51,7 +51,7 @@
   }
 
 .productCard_content{
-    margin: 1rem;
+    margin: 1.2rem;
 }
 
 .productName{
@@ -60,7 +60,7 @@
 
 .displayStack_1,
 .displayStack_2{
-    margin: 1rem 0;
+    margin: 0.2rem 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
