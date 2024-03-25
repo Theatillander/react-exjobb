@@ -45,7 +45,7 @@ function Card(props) {
       onMouseLeave={() => setFavoriteHovered(false)}
       onClick={handleFavoriteClick}
     >
-      {(favoriteClicked || favoriteHovered) ? <FavoriteIcon style={{ color: "white" }} /> : <FavoriteBorderIcon style={{ color: "white" }} />}
+      {(favoriteClicked || favoriteHovered) ? <FavoriteIcon style={{ color: "C7B198" }} /> : <FavoriteBorderIcon style={{ color: "white" }} />}
     </IconButton>
 
     <div className='rightIcons'>
