@@ -2,8 +2,7 @@
 
 * {
   font-family: "Open Sans", sans-serif;
-  margin: 0;
-  box-sizing: border-box;
+  /*margin: 0;*/
 }
 
 body {
@@ -12,8 +11,8 @@ body {
   background-color: rgb(255, 254, 255);
 }
 
-.App {
-  max-width: 1600px !important;
+/*.App {
+  max-width: 2500px !important;
   margin: 0 auto;
   position: relative;
-}
+}*/

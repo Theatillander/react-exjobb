@@ -2,6 +2,7 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Products from './components/Products';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <div className="CardSection">
         <Products />
         </div>
+        <Footer />
       </div>
   );
 }
