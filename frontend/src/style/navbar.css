@@ -1,18 +1,19 @@
 .nav-wrapper {
     background-color: #ffffff;
-    padding: 0.5rem 0;
+    /*padding: 0.5rem 0;*/
     position: sticky;
     top: 0;
     z-index: 30;
   }
   
   .nav-content {
-    max-width: 1300px;
+    /*max-width: 1300px;*/
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem 0;
-    margin: 0 auto;
+    /*margin: 0 auto;*/
+    padding-left: 2rem; /* Add padding to the left side */
+    padding-right: 2rem; /* Add padding to the right side */
   }
   
   .logo {
@@ -44,7 +45,7 @@
     content: "";
     width: 2rem;
     height: 0.2rem;
-    background: linear-gradient(90deg, #987554 -0.13%, white 99.87%);
+    background: linear-gradient(90deg, #c7b198 -0.13%, white 99.87%);
     border-radius: 0.5rem;
     position: absolute;
     bottom: -0.6rem;
@@ -66,7 +67,7 @@
     align-items: center;
     justify-content: center;
     color: white;
-    background-color: #987554;
+    background-color: #c7b198;
     padding: 0.6rem 2rem;
     border: none;
     outline: 2px solid transparent;
@@ -77,9 +78,9 @@
   }
   
   .contact-btn:hover {
-    color: #987554;
+    color: #c7b198;
     background: white;
-    outline: 2px solid #987554;
+    outline: 2px solid #c7b198;
   }
   .menu-btn {
     width: 3rem;
@@ -91,7 +92,7 @@
     border: none;
     border-radius: 0.4rem;
     color: #292929;
-    background: linear-gradient(90deg, #987554 -0.13%, white 99.87%);
+    background: linear-gradient(90deg, #c7b198 -0.13%, white 99.87%);
     line-height: 0;
     cursor: pointer;
     transition: all 0.4s ease;

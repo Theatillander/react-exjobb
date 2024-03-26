@@ -24,7 +24,7 @@
   }
   
   .social_icons li a:hover {
-    transform: translateY(-1px);
+    transform: scale(1.8);
     transition: ease 0.3s;
   }
   

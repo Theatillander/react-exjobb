@@ -27,26 +27,36 @@
   }
   
   .hero-content h2 {
+    margin: 10rem;
     font-size: 3.8rem;
     font-weight: 600;
     line-height: 5rem;
-    margin-bottom: 1rem;
-    margin-top: 10rem;
-    text-align: center;
+    margin-bottom: 3rem;
+    margin-top: 0rem;
+    text-align: left;
+    top: 15rem;
+    position: relative;
+   /*text-align: center; (Adds element in the middle of the page*/ 
   }
   
-  .hero-content p {
+  .Small_text {
+    margin-left: 10rem;
     width: 100%;
     font-size: 1rem;
     font-weight: 400;
     line-height: 2rem;
-    text-align: center;
+    text-align: left;
+    top: 12rem;
+    position: relative;
+    /*text-align: center; (Adds element in the middle of the page*/ 
   }
   
   .buttons {   
-    text-align: center;
-    margin: 2rem;
-    margin-bottom: 3rem;
+    /*text-align: center; (Adds element in the middle of the page*/ 
+    top: 12rem;
+    position: relative;
+    margin-left: 10rem;
+    margin-bottom: 10rem;
   }
  
   .button1, .button2{  
@@ -55,35 +65,13 @@
     border-radius: 5px;
   }
 
-  .button1{
-    color: white;
-    padding: 5px;
-    background-color: #586549;
-    border: 2px solid rgb(255, 255, 255);
-   font-weight: bold;
-  }
-  
-  .button1 {
-    font-size: 0.9rem;
-    font-weight: 500;
-    color: white;
-    background-color: #987554;
-    padding: 0.6rem 2rem;
-    border: 2px solid white;
-    outline: 2px solid transparent;
-    border-radius: 0.2rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-weight: bold;
-  }
-
   .button2 {
     font-size: 0.9rem;
     font-weight: 500;
-    color: #987554;
-    background-color: white;
+    color: white;;
+    background-color: #000000;
     padding: 0.6rem 2rem;
-    border: 2px solid #987554;
+    border: 2px solid #000000;
     outline: 2px solid transparent;
     border-radius: 0.2rem;
     cursor: pointer;
@@ -91,28 +79,33 @@
     font-weight: bold;
     cursor: pointer;
     display: inline-block;
-    position: relative;
+    position: absolute;
     transition: 0.5s;
-  }
-  
-  .button1:hover {
-    color: #987554;
-    background: white;
-    outline: 2px solid #987554;
-    transform: translateY(-0.2rem);
-    transition: all 0.3s ease;
   }
 
 .button2:hover{
-  color: #987554;
+  color:#000000;
   background: white;
-  outline: 1px solid #987554;
+  outline: 1px solid #000000;
   transform: translateY(-0.2rem);
   transition: all 0.3s ease;
 }
 
-.hero-content h1{
-margin-top: 5rem;
-padding: 4rem;
-text-align: center;
+.Most_popular{
+  margin-top: 1rem;
+  padding: 4rem;
+  text-align: center;
 }
+
+.header {
+  top: 0; /* Position the background image at the top of the header */
+  left: 0; /* Position the background image at the left of the header */
+  width: 100%; /* Ensure the background image spans the entire width of the header */
+  height: 700px; /* Ensure the background image spans the entire height of the header */
+  background-image: url("../../public/images/Headerimage9.png");
+  background-size: cover; /* Ensure the image covers the entire header */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  background-position: center 0%; /* Move the background image 10% up */
+}
+
+

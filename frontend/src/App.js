@@ -2,6 +2,7 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Products from './components/Products';
+import InfoCard from './components/InfoCard';
 import Footer from './components/Footer';
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
         <div className="CardSection">
         <Products />
         </div>
+        <InfoCard/>
         <Footer />
       </div>
   );
