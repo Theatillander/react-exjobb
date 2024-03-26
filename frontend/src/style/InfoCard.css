@@ -1,0 +1,35 @@
+.cards_infocard {
+    display: flex;
+    margin-top: 5rem;
+    justify-content: space-between;
+  }
+  
+  .infocard {
+    flex: 0 1 23%; /* Adjust width as needed */
+    text-align: center;
+    background-color: rgb(255, 255, 255); /* Example background color */
+    margin: 2rem;
+  }
+
+  .infocard h3{
+    margin-top: 2rem;
+    font-size: 15px;
+  }
+
+  .infocard p{
+    margin-bottom: 3rem;
+    font-size: 10px;
+  }
+
+  .infocard .MuiSvgIcon-root {
+    /* Styles for the icon inside .infocard */
+    color: #2d2d2d; /* Example color */
+    font-size: 24px; /* Example font size */
+    margin-top: 2rem; /* Example margin */
+    transform: scale(3); 
+  }
+
+.infocard .MuiSvgIcon-root:hover {
+    /* Styles for the icon on hover */
+    transform: scale(3.1); /* Example scale factor on hover */
+  }
