@@ -1,0 +1,56 @@
+.container_cardsection {
+    display: flex;
+    justify-content: center;
+}
+
+.cards_cardsection {
+    display: flex;
+    justify-content: space-around;
+}
+
+.cardsection {
+    position: relative;
+    width: 650px;
+    height: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 20px; /* Add margin around the card */
+    margin-top: 100px; /* Add margin around the card */
+}
+
+.cardsection::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-image: url("../../public/images/Headerimage9.png");
+    z-index: -1; /* Place the background behind other content */
+}
+
+.cardsection h3,
+.cardsection p,
+.card-btn {
+    position: relative; /* Position elements on top of the background */
+    z-index: 1; /* Ensure elements are on top of the background */
+}
+
+.card-btn {
+    display: block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.card-btn:hover {
+    background-color: #45a049;
+}

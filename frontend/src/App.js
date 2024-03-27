@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import Products from './components/Products';
 import InfoCard from './components/InfoCard';
 import Footer from './components/Footer';
+import AdSection from './components/AdSection';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <div className="CardSection">
         <Products />
         </div>
+        <AdSection />
         <InfoCard/>
         <Footer />
       </div>
