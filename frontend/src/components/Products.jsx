@@ -12,7 +12,6 @@ function Products() {
       price: 220,
       rating: 5,
       timeLeft: 27,
-      totalSales: 102
     },
     {
         id: 2,
@@ -22,7 +21,6 @@ function Products() {
         price: 250,
         rating: 3,
         timeLeft: 27,
-        totalSales: 42
     },
     {
         id: 3,
@@ -32,7 +30,6 @@ function Products() {
         price: 220,
         rating: 2,
         timeLeft: 27,
-        totalSales: 24
     },
     {
       id: 3,
@@ -42,7 +39,6 @@ function Products() {
       price: 220,
       rating: 2,
       timeLeft: 27,
-      totalSales: 47
   },
   ];
 
@@ -54,7 +50,6 @@ function Products() {
             key={item.id} /* key för att identifiera om något ändrats, lagts till, eller tagits bort. Ger element en identitet.*/
             price={item.price} /* Här använder vi props (diskproppen) för att hämta priset på produkten*/
             rating={item.rating}
-            totalSales={item.totalSales}
             name={item.name}
             image={item.image}
           />

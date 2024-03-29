@@ -1,6 +1,8 @@
 .container_cardsection {
     display: flex;
     justify-content: center;
+    background-color: #DCD5C8;
+    margin-top: 10rem;
 }
 
 .cards_cardsection {
@@ -11,13 +13,13 @@
 .cardsection {
     position: relative;
     width: 650px;
-    height: 300px;
+    height: 400px;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 8px;
     overflow: hidden;
-    margin: 20px; /* Add margin around the card */
-    margin-top: 100px; /* Add margin around the card */
+    margin: 20px; /* Add margin between the cards*/
+   /* margin-top: 100px; /* Add margin around the card */
 }
 
 .cardsection::before {

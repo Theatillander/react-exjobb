@@ -2,26 +2,22 @@ import '../style/navbar.css';
 
 function Navbar() {
   return (
-    <nav className="nav-wrapper">
+    <div className="nav-wrapper">
     <div className="nav-content">
       <img className="logo" src="" alt="Logo" />
-
-      <ul>
-        <li>
-          <a href="#/" className="menu-item">Home</a>
-        </li>
-        <li>
-          <a href="#/" className="menu-item">Products</a>
-        </li>
-        <li>
-          <a href="#/" className="menu-item">Shop All</a>
-        </li>
-        <button className="contact-btn" onClick={() => {}}>
-          Add to cart
-        </button>
+      <div class="nav-wrapper">
+      <ul class="menu-list">
+        <li><a href="#" class="menu-item">HOME</a></li>
+        <li><a href="#" class="menu-item">PRODUCTS</a></li>
+        <li><a href="#" class="menu-item">SHOP ALL</a></li>
       </ul>
     </div>
-  </nav>
+    <div class="contact-btn-container">
+      <a href="#" class="menu-item">NEWS</a>
+      <button class="contact-btn">CONTACT US</button>
+    </div>
+  </div>
+</div>
   );
 }
 

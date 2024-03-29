@@ -5,7 +5,7 @@ function Hero() {
   return (
     <div className="hero-content">
       <div className="header">
-       
+  
           <h2>Welcome to our shop!</h2>
           <p className="Small_text">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -15,7 +15,7 @@ function Hero() {
           <button className="button2" onClick={() => { } }>SHOP NOW</button>
         </div> </div>
         <div className="Most_popular">
-          <h1> Most popular this week</h1>
+          <h1> Our featured products</h1>
           <p>  Lorem ipsum dolor sit amet.</p>
     </div> 
     </div>
