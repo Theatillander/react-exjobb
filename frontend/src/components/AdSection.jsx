@@ -1,47 +1,27 @@
-import React, { useState } from 'react';
 import '../style/AdSection.css';
 
-function AdSection() {        
-    const [cards] = useState([
-        {
-            title: 'Free Shipping', 
-            text: 'some example text',
-            image: "images/posterpicture4.jpg",
-            button: {
-                text: "Information",
-                onClick: () => {
-                    // handle button click
-                }
-            }
-        },
-        {
-            title: 'Free gift', 
-            text: 'some example text',
-            image: "images/posterpicture3.jpg",
-            button: {
-                text: "Click me",
-                onClick: () => {
-                    // handle button click
-                }
-            }
-        }
-    ]);
+function AdSection() {
 
     return (
-        <div>
-            <section>
-                <div className='container_cardsection'>
-                    <div className='cards_cardsection'>
-                        {cards.map((cardsection, i) => (
-                            <div key={i} className='cardsection' style={{ backgroundImage: `url(${cardsection.image})` }}>
-                                <h3>{cardsection.title}</h3>
-                                <p>{cardsection.text}</p>
-                                <button className="card-btn" onClick={cardsection.button.onClick}>{cardsection.button.text}</button>
-                            </div>
-                        ))}
+        <div class="container_cardsection">
+            <div class="cards_cardsection">
+                <div class="cardsection"> 
+                <img src="/images/addimage2.jpg" alt="Image 1" />
+                <div className="card-content">
+                    <p className="p-class">ESSENTIAL POSTERS</p>
+                        <h3>20% Off All Frames</h3>
+                            <button class="card-btn">SHOP NOW</button>
                     </div>
                 </div>
-            </section>
+                    <div class="cardsection">
+                    <img src="/images/addimage.jpg" alt="Image 1" />
+                        <div className="card-content">
+                            <h3>10% Off First Order</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <button class="card-btn">SHOP NOW</button>
+                        </div>
+                    </div>
+            </div>
         </div>
     );
 }

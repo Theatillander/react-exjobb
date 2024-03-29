@@ -6,7 +6,7 @@ function Hero() {
     <div className="hero-content">
       <div className="header">
   
-          <h2>Welcome to our shop!</h2>
+          <h2>Welcome to Essential Posters!</h2>
           <p className="Small_text">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.

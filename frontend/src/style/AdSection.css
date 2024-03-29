@@ -3,6 +3,7 @@
     justify-content: center;
     background-color: #DCD5C8;
     margin-top: 10rem;
+    width: 100%;
 }
 
 .cards_cardsection {
@@ -12,27 +13,28 @@
 
 .cardsection {
     position: relative;
-    width: 650px;
+    width: 550px;
     height: 400px;
     padding: 20px;
-    border: 1px solid #ccc;
     border-radius: 8px;
     overflow: hidden;
     margin: 20px; /* Add margin between the cards*/
-   /* margin-top: 100px; /* Add margin around the card */
+    margin-top: 50px; /* Add margin around the card */
+    margin-bottom: 50px;
 }
 
-.cardsection::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
+.cardsection img {
     width: 100%;
     height: 100%;
-    background-size: cover;
-    background-position: center;
-    background-image: url("../../public/images/Headerimage9.png");
-    z-index: -1; /* Place the background behind other content */
+    object-fit: cover; /* Ensure the image covers the entire card */
+}
+
+.card-content {
+    position: absolute;
+    top: 10px; /* Adjust as needed */
+    left: 60px; /* Adjust as needed */
+    color: white;
+    z-index: 1; /* Ensure content is on top of the image */
 }
 
 .cardsection h3,
@@ -42,17 +44,39 @@
     z-index: 1; /* Ensure elements are on top of the background */
 }
 
+.cardsection h3{
+    font-size: 40px;
+    width: 250px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: black;
+    margin-bottom: 5px;
+    font-weight: 600; /* Set font-weight to normal to remove bold */
+    font-variation-settings:
+        "slnt" 0;
+}
+
+.cardsection p {
+    font-size: 15px;
+    color: black;
+    width: 300px;
+}
+
 .card-btn {
     display: block;
     margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
+    padding: 10px 30px;
+    background-color: #DBB6B8;
+    color: rgb(0, 0, 0);
     border: none;
     border-radius: 5px;
     cursor: pointer;
-}
-
-.card-btn:hover {
-    background-color: #45a049;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 15px;
+    font-weight: 800; 
+    font-variation-settings:
+        "slnt" 0;
 }

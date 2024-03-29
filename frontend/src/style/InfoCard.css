@@ -1,14 +1,14 @@
 .cards_infocard {
     display: flex;
-    margin-top: 5rem;
-    justify-content: space-between;
+    margin-top: 10rem;
+    justify-content: center;
   }
   
   .infocard {
-    flex: 0 1 23%; /* Adjust width as needed */
     text-align: center;
-    background-color: rgb(255, 255, 255); /* Example background color */
-    margin: 2rem;
+    background-color: rgb(255, 255, 255);
+    margin-left: 110px;
+    margin-right: 110px;
   }
 
   .infocard h3{
