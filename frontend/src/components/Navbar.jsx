@@ -4,7 +4,7 @@ function Navbar() {
   return (
     <div className="nav-wrapper">
     <div className="nav-content">
-      <img className="logo" src="" alt="Logo" />
+      <img className="logo" src="images/ESSENTIAL POSTERS.png" alt="Logo" />
       <div class="nav-wrapper">
       <ul class="menu-list">
         <li><a href="#" class="menu-item">HOME</a></li>
