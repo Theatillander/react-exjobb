@@ -11,7 +11,7 @@
   ![Homepage Cards Screenshot](https://i.imgur.com/znJ8Vjs.png)
 
 ### Special Discount Cards
-- Two visually appealing cards showcasing products with a 20% discount offer.
+- Two visually appealing cards showcasing products with 20% and 10% discount offer.
   
   ![Special Discount Cards Screenshot](https://i.imgur.com/fuWcM04.png)
 
