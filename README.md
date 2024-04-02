@@ -29,3 +29,9 @@
 
 - React
 - JavaScript
+
+
+## Mockup
+- Mockup created with Figma.
+  
+  ![Mockup-Figma](https://i.imgur.com/VhYKnic.png)
