@@ -1,3 +1,5 @@
+import '../style/ProductPage.css';
+
 const ProductPage = () => {
 return (
     <div className="ProductPage">
