@@ -48,7 +48,7 @@ function Products() {
         return (
           <Card
             key={item.id} /* key för att identifiera om något ändrats, lagts till, eller tagits bort. Ger element en identitet.*/
-            price={item.price} /* Här använder vi props (diskproppen) för att hämta priset på produkten*/
+            price={item.price} /* Här använder vi props för att hämta priset på produkten*/
             rating={item.rating}
             name={item.name}
             image={item.image}
