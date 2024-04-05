@@ -1,8 +1,8 @@
 const ProductPage = () => {
 return (
     <div className="ProductPage">
-        <h2> Add a new product </h2>
-        <p> hi </p>
+        <h2> Here are all our posters available!</h2>
+        <p> Shop the most popular posters.</p>
     </div>
 );
 

@@ -6,16 +6,16 @@ function Navbar() {
     <div className="nav-wrapper">
     <div className="nav-content">
       <img className="logo" src="images/ESSENTIAL POSTERS.png" alt="Logo" />
-      <div class="nav-wrapper">
-      <ul class="menu-list">
-        <li><a href="/" class="menu-item">HOME</a></li>
-        <li><a href="ProductPage" class="menu-item">PRODUCTS</a></li>
-        <li><a href="#" class="menu-item">SHOP ALL</a></li>
+      <div className="nav-wrapper">
+      <ul className="menu-list">
+        <li><a href="/" className="menu-item">HOME</a></li>
+        <li><a href="ProductPage" className="menu-item">PRODUCTS</a></li>
+        <li><a href="#" className="menu-item">SHOP ALL</a></li>
       </ul>
     </div>
-    <div class="contact-btn-container">
-      <a href="#" class="menu-item">NEWS</a>
-      <button class="contact-btn">CONTACT US</button>
+    <div className="contact-btn-container">
+      <a href="#" className="menu-item">NEWS</a>
+      <button className="contact-btn">CONTACT US</button>
     </div>
   </div>
 </div>
