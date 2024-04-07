@@ -11,7 +11,6 @@ function Products() {
       productType: "Poster 1",
       price: 220,
       rating: 5,
-      timeLeft: 27,
     },
     {
         id: 2,
@@ -19,8 +18,7 @@ function Products() {
         image: "images/posterpicture2.jpg",
         productType: "Poster 2",
         price: 250,
-        rating: 3,
-        timeLeft: 27,
+        rating: 5,
     },
     {
         id: 3,
@@ -28,8 +26,7 @@ function Products() {
         image: "images/posterpicture3.jpg",
         productType: "Poster 3",
         price: 220,
-        rating: 2,
-        timeLeft: 27,
+        rating: 5,
     },
     {
       id: 3,
@@ -37,8 +34,7 @@ function Products() {
       image: "images/posterpicture4.jpg",
       productType: "Poster 4",
       price: 220,
-      rating: 2,
-      timeLeft: 27,
+      rating: 5,
   },
   ];
 
