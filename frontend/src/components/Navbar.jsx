@@ -9,8 +9,8 @@ function Navbar() {
       <div className="nav-wrapper">
       <ul className="menu-list">
         <li><a href="/" className="menu-item">HOME</a></li>
-        <li><a href="ProductPage" className="menu-item">PRODUCTS</a></li>
-        <li><a href="#" className="menu-item">SHOP ALL</a></li>
+        <li><a href="ProductPage" className="menu-item">SHOP ALL</a></li>
+        <li><a href="#" className="menu-item">FRAMES</a></li>
       </ul>
     </div>
     <div className="contact-btn-container">
