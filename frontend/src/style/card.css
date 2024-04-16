@@ -1,14 +1,13 @@
 
 .card{
-    border-width: 10px;
-    border-radius: 5px;
-    border-style: solid;
-    border-color: rgb(0, 0, 0);
-    position: relative;
-    background-color:rgb(255, 255, 255);
-    margin: 1rem;
-    width: 20%;
-    transition: 0.2s;
+  border-width: 10px;
+  border-radius: 5px;
+  border-style: solid;
+  border-color: rgb(0, 0, 0);
+  position: relative;
+  margin: 1rem;
+  width: 20%;
+  transition: 0.2s;
 }
 
 .card:hover{
@@ -18,9 +17,8 @@
 
 .image{
     width:  100%;
-    height: 22vw;
+    height: 25vw;
     object-fit: cover;
-
 }
 
 .top {
@@ -34,29 +32,26 @@
   
   .rightIcons {
     position: absolute;
-    top: 1rem; /* Adjust top position as needed */
-    right: 1rem; /* Adjust right position as needed */
+    top: 1rem; 
+    right: 1rem; 
     display: flex;
     align-items: center;
     transform: scale(1.3);
-    color: white; /* Specify the desired color */
+    color: white;
   }
   
   .ProductCard_fastSelling{
     transform: scale(1.3);
-    box-shadow: 0px 2px 10px rgba(18, 18, 18, 0.499); /* Customize the shadow as needed */
-    border-radius: 50%; /* Optional: Make the container circular */
-    background-color: white; /* Set the background color inside the ring */
+    box-shadow: 0px 2px 10px rgba(18, 18, 18, 0.499); 
+    border-radius: 50%; 
+    background-color: white; 
   }
   
   .productCard_wishlist,
   .productCard_cart {
-    margin-left: 1rem; /* Add margin between the icons */
+    margin-left: 1rem; 
   }
 
-.productCard_content{
-    margin: 1.2rem;
-}
 
 .productName{
     text-align: center;
@@ -88,4 +83,28 @@
 
 .productText{
   text-align: center;
+}
+
+
+.productInfoHidden {
+  display: none;
+}
+
+
+.productCard_content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%; 
+  background-color: white; 
+  padding: 1.2rem; 
+  box-sizing: border-box; 
+}
+
+.productInfoButton {
+  background-color: transparent; 
+  border: none; 
+  color: #000; 
+  cursor: pointer;
+  outline: none; 
 }
