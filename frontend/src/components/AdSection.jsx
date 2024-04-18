@@ -3,9 +3,9 @@ import '../style/AdSection.css';
 function AdSection() {
 
     return (
-        <div class="container_cardsection">
-            <div class="cards_cardsection">
-                <div class="cardsection"> 
+        <div className="container_cardsection">
+            <div className="cards_cardsection">
+                <div className="cardsection"> 
                 <img src="/images/addimage2.jpg" alt="Image 1" />
                 <div className="card-content">
                     <p className="p-class">ESSENTIAL POSTERS</p>
@@ -13,12 +13,12 @@ function AdSection() {
                             <button class="card-btn">SHOP NOW</button>
                     </div>
                 </div>
-                    <div class="cardsection">
+                    <div className="cardsection">
                     <img src="/images/addimage.jpg" alt="Image 1" />
                         <div className="card-content">
                             <h3>10% Off First Order</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            <button class="card-btn">SHOP NOW</button>
+                            <button className="card-btn">SHOP NOW</button>
                         </div>
                     </div>
             </div>
