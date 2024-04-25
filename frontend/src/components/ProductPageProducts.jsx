@@ -4,15 +4,27 @@ import React, { useState, useEffect } from 'react';
 var jsonData = ('frontend/public/cards.json');
 
 function ProductPageProducts() {
+
   var [data, setData] = useState([]);
+  const startTime = performance.now();
 
   useEffect(() => {
-    fetch('/cards.json') // Fetch JSON data from the public folder
-      .then(response => response.json())
-      .then(jsonData => setData(jsonData))
-      .catch(error => console.error('Error fetching data:', error));
+    setInterval(() => {
+      fetch('/cards.json')
+        .then(response => response.json())
+        .then(jsonData => setData(jsonData))
+        .catch(error => console.error('Error fetching data:', error));
+        setData([]);
+    }, 1000);
   }, []);
-  
+
+  useEffect(() => {
+    if (data.length == 1000){
+      const endTime = performance.now();
+      const totalTime = endTime - startTime;
+      console.log(`${totalTime} ms`);
+    }
+  }, [data]);
 
   return (
     <div className='gallery'>
