@@ -1,31 +1,41 @@
-import React from 'react';
 import { createRoot } from 'react-dom/client';
-import './index.css';
+import React from 'react';
 import App from './App';
+import ProductPageProducts from './components/ProductPageProducts';
 
-// function for measuring renderingtime 
-function MeasureRenderingTime () {
-  const startTime = performance.now(); 
+const root = createRoot(document.getElementById('root'));
 
-  const root = createRoot(document.getElementById('root'));
+const measurementData = [];
+
+function MeasureRenderingTime(Component) {
+
   root.render(
     <React.StrictMode>
-      <App />
+      <Component />
     </React.StrictMode>
   );
-
-window.addEventListener('load', () => {
-
-  const endTime = window.performance.now();
-  const totalTime = endTime - startTime;
-
-  // return the totalTime of the measuring
-  console.log(totalTime + 'ms');
-});
 }
 
-const measurementCount = 10;
+const measurementCount = 1000;
 
+// Measure rendering time for App component
 for (let i = 0; i < measurementCount; i++) {
-  MeasureRenderingTime();
+  console.log(i);
+  MeasureRenderingTime(App);
 }
+
+const measurementText = measurementData.join('\n');
+
+function downloadTextFile(filename, text) {
+  const blob = new Blob([text], { type: 'text/plain' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = filename;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+downloadTextFile('rendering_times.txt', measurementText);

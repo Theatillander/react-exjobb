@@ -1,10 +1,10 @@
 import Card from './Card';
 import '../style/products.css';
 import React, { useState, useEffect } from 'react';
-const jsonData = ('frontend/public/cards.json');
+var jsonData = ('frontend/public/cards.json');
 
 function ProductPageProducts() {
-  const [data, setData] = useState([]);
+  var [data, setData] = useState([]);
 
   useEffect(() => {
     fetch('/cards.json') // Fetch JSON data from the public folder

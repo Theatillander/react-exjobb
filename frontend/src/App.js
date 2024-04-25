@@ -1,4 +1,5 @@
 import './App.css';
+import React,{ useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Products from './components/Products';
@@ -9,7 +10,16 @@ import ProductPage from './components/ProductPage';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ProductPageProducts from './components/ProductPageProducts';
 
-function App() {
+function App() { 
+
+  const startTime = performance.now();
+
+  useEffect(() => {
+    const endTime = performance.now();
+    console.log(`Rendering Time for startime ${startTime}  and endtime ${endTime}`);
+    /* measurementData.push(`${startTime} ${endTime}`); */
+  });
+
   return (
     <Router> 
       <div className="App">
