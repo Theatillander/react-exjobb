@@ -22,7 +22,7 @@ function ProductPageProducts() {
     if (data.length == 1000){
       const endTime = performance.now();
       const totalTime = endTime - startTime;
-      console.log(`${totalTime} ms`);
+      console.log(`${totalTime}`);
     }
   }, [data]);
 
