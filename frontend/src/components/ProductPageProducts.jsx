@@ -19,7 +19,7 @@ function ProductPageProducts() {
   }, []);
 
   useEffect(() => {
-    if (data.length == 1000){
+    if (data.length == 1000){  /* i < 1000 */
       const endTime = performance.now();
       const totalTime = endTime - startTime;
       console.log(`${totalTime}`);
