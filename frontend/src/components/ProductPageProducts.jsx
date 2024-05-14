@@ -5,7 +5,7 @@ import React, { useState, useEffect } from 'react';
 /*
   OBS! 
   För att skapa en ny mätserie måste man först gå in i localstorage -> "clear all", sedan kan scriptet starta
-  När koden är klar laddar den ner "hackerman.json" som innehåller alla mätvärden.
+  När koden är klar laddar den ner ".json" som innehåller alla mätvärden.
 */
 
 function ProductPageProducts() {
@@ -57,7 +57,7 @@ function ProductPageProducts() {
       const url = URL.createObjectURL(blob);
       const link = document.createElement('a');
       link.href = url;
-      link.setAttribute('download', 'hackerman');
+      link.setAttribute('download', 'measurement js');
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
