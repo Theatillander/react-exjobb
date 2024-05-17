@@ -10,7 +10,7 @@ import React, { useState, useEffect } from 'react';
 
 function ProductPageProducts() {
 
-  const MAX_COUNT = 10; // ändra detta värdet för att få ut X antal mätningar
+  const MAX_COUNT = 3000; // ändra detta värdet för att få ut X antal mätningar
 
   const [data, setData] = useState([]);
 
