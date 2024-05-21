@@ -13,50 +13,50 @@ interface CardData {
 
 function ProductPageProducts() {
   const [data, setData] = useState<CardData[]>([]);
-  const [measurementCount, setMeasurementCount] = useState<number>(0);
-  const [startTime, setStartTime] = useState<number | null>(null);
-  const MAX_COUNT: number = 5;
+  const [measurementCount, setMeasurementCount] = useState<number>(parseInt(localStorage.getItem('measurementCount') || '0'));
+  const [startTime, setStartTime] = useState<number>(performance.now());
+
+  const MAX_COUNT: number = 100;
 
   useEffect(() => {
-    setStartTime(performance.now());
+    const fetchData = async () => {
+      const count: number = parseInt(localStorage.getItem('measurementCount') || '0');
 
-    if (!localStorage.getItem('measurementCount')) {
-      localStorage.setItem('measurementCount', '0');
-    }
-
-    const count: number = parseInt(localStorage.getItem('measurementCount') || '0');
-    setMeasurementCount(count);
-
-    if (count < MAX_COUNT) {
-      fetch('/cards.json')
-        .then(response => response.json())
-        .then(jsonData => {
+      if (count < MAX_COUNT) {
+        try {
+          const response = await fetch('/cards.json');
+          const jsonData = await response.json();
           setData(jsonData);
+
           if (jsonData.length === 1000) {
             const endTime: number = performance.now();
-            const totalTime: number = endTime - startTime!;
+            const totalTime: number = endTime - startTime;
             console.log(`${count}: ${totalTime}`);
 
             const dataString: string | null = localStorage.getItem('data');
-            if (dataString) {
-              const prevArr: number[] = JSON.parse(dataString);
-              prevArr.push(totalTime);
-              localStorage.setItem('data', JSON.stringify(prevArr));
-            }
-
+            const prevArr: number[] = dataString ? JSON.parse(dataString) : [];
+            prevArr.push(totalTime);
+            localStorage.setItem('data', JSON.stringify(prevArr));
             localStorage.setItem('measurementCount', (count + 1).toString());
-          }
-        })
-        .catch(error => console.error('Error fetching data:', error));
 
-      setTimeout(() => {
-        setData([]);
-      }, 3000);
-    }
-  }, [MAX_COUNT, measurementCount, startTime]);
+            setMeasurementCount(count + 1);
+          }
+        } catch (error) {
+          console.error('Error fetching data:', error);
+        }
+
+        setTimeout(() => {
+          setData([]);
+          setStartTime(performance.now()); 
+        }, 3000);
+      }
+    };
+
+    fetchData();
+  }, [measurementCount]); 
 
   useEffect(() => {
-    if (measurementCount >= MAX_COUNT) {
+    if (measurementCount === MAX_COUNT) {
       const dataString: string | null = localStorage.getItem('data');
       if (dataString) {
         const blob: Blob = new Blob([dataString], { type: 'application/json' });
@@ -70,7 +70,7 @@ function ProductPageProducts() {
         URL.revokeObjectURL(url);
       }
     }
-  }, [MAX_COUNT, measurementCount]);
+  }, [measurementCount]); 
 
   return (
     <div className='gallery'>
