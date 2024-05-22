@@ -12,65 +12,69 @@ interface CardData {
 }
 
 function ProductPageProducts() {
+  const MAX_COUNT = 60; // ändra detta värdet för att få ut X antal mätningar
+
   const [data, setData] = useState<CardData[]>([]);
-  const [measurementCount, setMeasurementCount] = useState<number>(parseInt(localStorage.getItem('measurementCount') || '0'));
-  const [startTime, setStartTime] = useState<number>(performance.now());
 
-  const MAX_COUNT: number = 100;
+  const startTime = performance.now();
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const count: number = parseInt(localStorage.getItem('measurementCount') || '0');
+  if (!localStorage.getItem('measurementCount')) {
+    localStorage.setItem('measurementCount', '0');
+  }
 
-      if (count < MAX_COUNT) {
-        try {
-          const response = await fetch('/cards.json');
-          const jsonData = await response.json();
-          setData(jsonData);
-
-          if (jsonData.length === 1000) {
-            const endTime: number = performance.now();
-            const totalTime: number = endTime - startTime;
-            console.log(`${count}: ${totalTime}`);
-
-            const dataString: string | null = localStorage.getItem('data');
-            const prevArr: number[] = dataString ? JSON.parse(dataString) : [];
-            prevArr.push(totalTime);
-            localStorage.setItem('data', JSON.stringify(prevArr));
-            localStorage.setItem('measurementCount', (count + 1).toString());
-
-            setMeasurementCount(count + 1);
-          }
-        } catch (error) {
-          console.error('Error fetching data:', error);
-        }
-
-        setTimeout(() => {
-          setData([]);
-          setStartTime(performance.now()); 
-        }, 3000);
-      }
-    };
-
-    fetchData();
-  }, [measurementCount]); 
+  if (!localStorage.getItem('data')) {
+    localStorage.setItem('data', JSON.stringify([]));
+  }
+  
+  const countString: string|null = localStorage.getItem('measurementCount');
+  const count: number|null = countString !== null ? parseInt(countString) : null;
+  if (count == null) throw new TypeError("countString can't be null");
 
   useEffect(() => {
-    if (measurementCount === MAX_COUNT) {
-      const dataString: string | null = localStorage.getItem('data');
-      if (dataString) {
-        const blob: Blob = new Blob([dataString], { type: 'application/json' });
-        const url: string = URL.createObjectURL(blob);
-        const link: HTMLAnchorElement = document.createElement('a');
-        link.href = url;
-        link.setAttribute('download', 'measurement.json');
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-        URL.revokeObjectURL(url);
+
+    if (count < MAX_COUNT){
+      fetch('/cards.json')
+        .then(response => response.json())
+        .then(jsonData => setData(jsonData))
+        .catch(error => console.error('Error fetching data:', error));
+
+      if (data.length === 1000){ // Mystery
+        const endTime = performance.now();
+        const totalTime = endTime - startTime;
+        console.log(`${count}: ${totalTime}`);
+
+        let lsData = localStorage.getItem('data');
+        let prevArr: number[]|null = lsData !== null ? JSON.parse(lsData) : null;
+        if (prevArr !== null) prevArr.push(totalTime);
+        else if (prevArr == null) throw new TypeError("prevArr can't be null");
+        localStorage.setItem('data', JSON.stringify(prevArr));
+        console.log(prevArr);
+    
+        localStorage.setItem('measurementCount', JSON.stringify(count+1));
       }
+  
+      setTimeout(() => {
+        setData([]);
+      }, 3000);
     }
-  }, [measurementCount]); 
+
+    else if (count >= MAX_COUNT){
+      let lsData = localStorage.getItem('data');
+      let finishedMeasurement = lsData !== null ? JSON.parse(lsData) : null;
+      const blob = new Blob([finishedMeasurement], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.setAttribute('download', 'measurement js');
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      URL.revokeObjectURL(url);
+    }
+
+  }, [data])
+
+
 
   return (
     <div className='gallery'>
