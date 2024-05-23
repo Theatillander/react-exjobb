@@ -12,7 +12,7 @@ interface CardData {
 }
 
 function ProductPageProducts() {
-  const MAX_COUNT = 60; // ändra detta värdet för att få ut X antal mätningar
+  const MAX_COUNT = 3000; // ändra detta värdet för att få ut X antal mätningar
 
   const [data, setData] = useState<CardData[]>([]);
 
@@ -48,8 +48,7 @@ function ProductPageProducts() {
         if (prevArr !== null) prevArr.push(totalTime);
         else if (prevArr == null) throw new TypeError("prevArr can't be null");
         localStorage.setItem('data', JSON.stringify(prevArr));
-        console.log(prevArr);
-    
+  
         localStorage.setItem('measurementCount', JSON.stringify(count+1));
       }
   
