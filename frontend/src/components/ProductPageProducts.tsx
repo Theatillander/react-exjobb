@@ -12,7 +12,7 @@ interface CardData {
 }
 
 function ProductPageProducts() {
-  const MAX_COUNT = 3000; // ändra detta värdet för att få ut X antal mätningar
+  const MAX_COUNT = 2000; // ändra detta värdet för att få ut X antal mätningar
 
   const [data, setData] = useState<CardData[]>([]);
 
@@ -57,7 +57,7 @@ function ProductPageProducts() {
       }, 3000);
     }
 
-    else if (count >= MAX_COUNT){
+    else if (count == MAX_COUNT){
       let lsData = localStorage.getItem('data');
       let finishedMeasurement = lsData !== null ? JSON.parse(lsData) : null;
       const blob = new Blob([finishedMeasurement], { type: 'application/json' });
